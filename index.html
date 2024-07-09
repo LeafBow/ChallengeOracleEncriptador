@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/Top.png" alt="logo.png" />
+    </header>
+    <main class="main">
+      <div class="input__container">
+        <section class="encryptor">
+          <textarea
+            class="encryptor__text"
+            placeholder="Ingresa el texto aqui"
+            id="message"
+          ></textarea>
+          <div class="alert__container">
+            <img src="./assets/bi_exclamation-circle-fill.png" alt="" />
+            <p class="alert__text">Solo letras minúsculas y sin acentos</p>
+          </div>
+        </section>
+        <div class="button__container">
+          <button class="button__1" onclick="encryptMessage()">
+            Encriptar
+          </button>
+          <button
+            class="button__2"
+            onclick="decryptMessage()"
+            id="decryptorButton"
+          >
+            Desencriptar
+          </button>
+        </div>
+      </div>
+      <section class="encrypted__container">
+        <img
+          id="imageEncrypted"
+          src="./assets/Muñeco.png"
+          class="encrypted__image"
+          alt="Muñeco.png"
+        />
+        <p class="encrypted__message" id="newMessage">
+          Ningún mensaje fue encontrado
+        </p>
+        <p class="encrypted__text" id="textin">
+          Ingresa el texto que desees encriptar o desencriptar
+        </p>
+        <button class="button__2 hidden" onclick="copy()" id="copyButton">
+          Copiar
+        </button>
+      </section>
+    </main>
+    <!-- <footer>
+      <div>
+        <h2>Miguel Angel Bazan de la "O"</h2>
+        <p>
+          El website fue creado como parte del challenge del curso de Alura
+          Latam
+        </p>
+      </div>
+    </footer> -->
+    <script src="./script.js"></script>
+  </body>
+</html>
